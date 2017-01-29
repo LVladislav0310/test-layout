@@ -1,0 +1,250 @@
+/*
+* Third Party
+*/
+@import "../../bower_components/normalize.css/normalize.css";
+
+
+/*
+* Custom
+*/
+@import "partials/variable";
+/*@import "mixins.scss";*/
+
+
+@font-face {
+	font-family: 'Campton';
+	src: url('fonts/Campton_Bold.eot');
+	src: local('âº'), url('../fonts/Rene Bieder - Campton Bold DEMO.woff') format('woff'), url('../fonts/Rene Bieder - Campton Bold DEMO.ttf') format('truetype'), url('../fonts/Rene Bieder - Campton Bold DEMO.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'Conv_OldStandard-Regular';
+	src: url('fonts/OldStandard-Regular.eot');
+	src: local('âº'), url('fonts/OldStandard-Regular.woff') format('woff'), url('fonts/OldStandard-Regular.ttf') format('truetype'), url('fonts/OldStandard-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@mixin column() {
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+	font-family: "Arial";
+	list-style: none;
+	width: 150px;
+	display:inline-block;
+	vertical-align: top;
+}
+
+@mixin menu__catalog__item() {
+	margin: 11px 3px;
+    line-height: 90%;
+}
+
+
+
+
+body{
+	background: #fff;
+}
+
+.wrapper{
+	max-width: 890px;
+	margin: 0 auto;
+	border: 1px solid red;
+}
+
+.title{
+	font-size: 60px;
+	font-family: "Arial";
+	margin: 0 auto;
+	margin-bottom: 28px;
+	font-weight: 100;
+}
+
+.catalog-wrapper{
+	font-size: 0;
+	margin-top: 19px;
+	margin-bottom: 80px;
+}
+
+.catalog{
+	
+	&__title{
+		font-size: 60px;
+		font-family: "Arial";
+		margin: 0 auto;
+		margin-bottom: 28px; 
+	}
+
+	&__item{
+		display: inline-block;
+		vertical-align: top;
+		width: 260px;
+		background: #e5e5e5;
+		font-size: 12px;
+		margin: 0 25px 50px 0;
+		text-align: center;	
+		
+		&:nth-child(3){
+			margin-right: 0;
+		}
+	}
+
+	&__caption{
+		display: block;
+		font-size: 19px;
+		max-width: 260px;
+		margin: 0 10px 10px 10px;
+		text-align: left;
+		font-size: 18px;
+		font-family: "Arial";
+	}
+
+	&__img{
+		margin: 10px 0 0 0;
+	}
+}
+
+.menu{
+	height: 48px;
+	background: #e5e5e5;
+	border-bottom: #000 2px solid;
+	margin-bottom: 245px;
+	font-size: 0;
+	
+	&__item{
+		display: inline-block;
+		vertical-align: top;
+		font-size: 18px;
+		margin-right: -2px;
+		
+		
+		& > span{
+			text-decoration: none;
+			color: #000;
+			border: 2px solid #000;
+    		padding: 13px 40px 13px 40px;
+    		margin-top: 0px;
+    		display: block;
+		}
+	}
+}
+
+.sub-menu{
+	&__wrapper{
+		position: absolute;
+		min-width: 401px;
+		font-size: 0;
+		background: #fff;
+		box-shadow: -2px 8px 19px 3px rgba(0,0,0,0.75);
+		display: none;
+		&.catalog{
+			/* left: 381px; */
+			display: none;
+		}
+
+	}
+
+	
+	&__column{	
+		@include column();
+	}
+
+	&__column-item{
+		padding: 5px;
+		&:hover{background: #e5e5e5}
+	}
+
+	&__img{
+		display: inline-block;
+	}
+}
+
+.active{
+	display: block!important;	
+	background: red;
+}
+
+form{
+	height: 145px;
+	
+}
+
+.my-check{
+	width: 10px;
+	height: 10px;
+	border: 1px solid red;
+	border-radius: 5px;
+	position: absolute;
+}
+
+#check1{
+	position: relative;
+}
+
+.dot {
+	content: "";
+    width: 6px;
+    height: 6px;
+    background: #000;
+    border-radius: 2px;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+	}
+
+/*.gender-select{
+  float: left;
+  height: 40px;
+  width: 200px;
+  background: $main-color;
+  font-size: 16px;
+  border: 2px solid #cccccc;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  padding-left: 10px;
+  background-image: url('../assets/img/arr-select.png');
+  background-position: 96% 50%;
+  background-repeat: no-repeat;
+}*/
+
+.slider{
+	font-size: 0;
+
+	&__img{
+		display: none;
+	}
+
+	&__img_active{
+		display: block;
+	}
+	
+	&__items-imgs-wrapper{
+		display: inline-block;
+		vertical-align: top;
+		width: 621px;
+	}
+
+	&__text-captions-wrapper{
+		display: inline-block;
+		vertical-align: top;
+		font-size: 14px;
+		width: 240px;
+    	padding-left: 20px;	
+	}
+
+	&__text-item{
+		font-size: 18px;
+		margin: 30px 0px;
+	}
+}
+
+.slider-img-captions{
+	position: absolute;
+}
